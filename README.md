@@ -18,6 +18,10 @@ $WPsB_Class_Selector->register();
 post type is `post`, template `single.php`,
 `WPsB_Single_Post_Controller` instance is stored in the `set_query_var($args['store_name'])`
 
-```PHP: in theme template
+in theme template,
+```PHP
 $my_data = get_query_var( 'my_controller' );
+
+
+echo esc_html( $my_data->foo );
 ```
