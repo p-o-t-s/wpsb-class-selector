@@ -2,16 +2,16 @@
 
 /**
  * Class WPsB_Class_Selector
- * @version 0.1.0
+ * @version 0.1.1
  */
-
 class WPsB_Class_Selector
 {
     public function __construct(array $config)
     {
         $defaults_class_config = array(
             "prefix" => "",
-            "suffix" => ""
+            "suffix" => "",
+            "store_name" => "my_class"
         );
 
         $this->class_data = array_merge($defaults_class_config, $config);
@@ -45,7 +45,7 @@ class WPsB_Class_Selector
 
         if ($class_name)
             // must use Autoloader
-            set_query_var('controller', new $class_name);
+            set_query_var($this->class_data['store_name'], new $class_name);
 
         return;
     }
