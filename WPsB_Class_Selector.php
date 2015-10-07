@@ -121,8 +121,6 @@ class WPsB_Class_Selector
         $class_names[] = "Single_{$post_type}";
         $class_names[] = "Single";
 
-        include('WPsB_Single_Post_Controller.php');
-
         return $this->get_query_class_name('single', $class_names);
     }
 
