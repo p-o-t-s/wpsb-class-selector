@@ -29,3 +29,4 @@ echo esc_html( $my_data->foo );
 
 * getter/setter static function
 * Corresponding to the `attachment', `paged`, `comment_popup`
+* The name of the class should always be set in the snake case
