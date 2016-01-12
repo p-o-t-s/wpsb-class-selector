@@ -25,3 +25,7 @@ $my_data = get_query_var( 'my_controller' );
 
 echo esc_html( $my_data->foo );
 ```
+## feature
+
+* getter/setter static function
+* Corresponding to the `attachment', `paged`, `comment_popup`
